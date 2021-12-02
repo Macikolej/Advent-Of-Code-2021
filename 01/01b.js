@@ -1,5 +1,7 @@
 exportFunctions = require("../export-functions");
 
+let arrayOfLines = exportFunctions.splitTextFileByNewLine("./01.txt");
+
 const iterateOverArray = (array, index, index2, index3, index4) => {
   if (!isNaN(parseInt(array[index4]))) {
     if ((parseInt(array[index2]) + parseInt(array[index3]) + parseInt(array[index4])) > (parseInt(array[index]) + parseInt(array[index2]) + parseInt(array[index3]))) {
@@ -10,7 +12,4 @@ const iterateOverArray = (array, index, index2, index3, index4) => {
   return 0;
 }
 
-let string = exportFunctions.readTextFile("./01.txt");
-let array = string.split("\n");
-
-console.log(iterateOverArray(array, 0, 1, 2, 3));
+console.log(iterateOverArray(arrayOfLines, 0, 1, 2, 3));

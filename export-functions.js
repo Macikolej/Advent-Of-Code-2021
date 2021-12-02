@@ -4,4 +4,8 @@ const readTextFile = (path) => {
   return text;
 }
 
-module.exports = { readTextFile }
+const splitTextFileByNewLine = (path) => {
+  return readTextFile(path).split("\n")
+}
+
+module.exports = { readTextFile, splitTextFileByNewLine }
