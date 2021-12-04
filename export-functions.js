@@ -8,4 +8,12 @@ const splitTextFileByNewLine = (path) => {
   return readTextFile(path).split("\n")
 }
 
-module.exports = { readTextFile, splitTextFileByNewLine }
+const transformNumberFromBinaryToDecimal = (number) => {
+  let result = 0;
+  for (let i = number.length - 1; i >= 0; i --) {
+    result += number[i] * Math.pow(2, number.length - i - 1);
+  }
+  return result;
+}
+
+module.exports = { readTextFile, splitTextFileByNewLine, transformNumberFromBinaryToDecimal }
