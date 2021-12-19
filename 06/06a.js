@@ -19,7 +19,7 @@ const day = () => {
   newLanternFishArray = [];
 }
 
-for (let i = 0; i < 256; i ++) {
+for (let i = 0; i < 80; i ++) {
   day();
 }
 
